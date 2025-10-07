@@ -1,1 +1,5 @@
-export default () => ({});
+export default () => ({
+  tinymce:{
+    enabled:true
+  }
+});
