@@ -199,6 +199,18 @@ export interface RunningLineRunningLine extends Struct.ComponentSchema {
   };
 }
 
+export interface SocialNetworkSocialNetwork extends Struct.ComponentSchema {
+  collectionName: 'components_social_network_social_networks';
+  info: {
+    displayName: 'social-network';
+  };
+  attributes: {
+    alt: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    url: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -216,6 +228,7 @@ declare module '@strapi/strapi' {
       'cases-page.cases-page-title': CasesPageCasesPageTitle;
       'module-client-say.client-say': ModuleClientSayClientSay;
       'running-line.running-line': RunningLineRunningLine;
+      'social-network.social-network': SocialNetworkSocialNetwork;
     }
   }
 }
